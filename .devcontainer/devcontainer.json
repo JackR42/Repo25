@@ -1,0 +1,21 @@
+{
+  "name": "SQL Server 2025 Enterprise Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [1433],
+  "portsAttributes": {
+    "1433": {
+      "label": "SQL Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-mssql.mssql"
+      ]
+    }
+  },
+  "postCreateCommand": "echo 'DevContainer with SQL Server 2025 Enterprise Dev Edition is ready!'"
+}
