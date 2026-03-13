@@ -18,5 +18,6 @@
       ]
     }
   },
-  "postCreateCommand": "echo 'DevContainer with SQL Server 2025 Enterprise Dev Edition is ready!'"
+  "postCreateCommand": "echo 'DevContainer with SQL Server 2025 Enterprise Dev Edition is ready!'",
+  "shutdownAction": "stopCompose"
 }
