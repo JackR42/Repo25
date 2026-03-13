@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      - ../..:/workspace:cached
+    command: sleep infinity
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    env_file:
+      - .env
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+volumes:
+  sqlserver-data:
