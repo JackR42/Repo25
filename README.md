@@ -12,16 +12,11 @@ This repository includes a dev container that runs **SQL Server 2025 Enterprise 
 
 ### Getting started
 
-1. Copy the example environment file and set a strong SA password:
+1. Open the repository in VS Code and click **Reopen in Container** when prompted (or run **Dev Containers: Reopen in Container** from the Command Palette).
 
-   ```bash
-   cp .devcontainer/.env.example .devcontainer/.env
-   # Edit .devcontainer/.env and update MSSQL_SA_PASSWORD
-   ```
+   > `.devcontainer/.env` is created automatically from `.env.example` on first run. To use a custom SA password, edit `.devcontainer/.env` before the container starts (or after stopping it).
 
-2. Open the repository in VS Code and click **Reopen in Container** when prompted (or run **Dev Containers: Reopen in Container** from the Command Palette).
-
-3. SQL Server 2025 will start automatically. Connect to it using the **SQL Server** VS Code extension (`ms-mssql.mssql`) with:
+2. SQL Server 2025 will start automatically. Connect to it using the **SQL Server** VS Code extension (`ms-mssql.mssql`) with:
    - **Server:** `sqlserver`
    - **Authentication:** SQL Login
    - **Username:** `sa`
