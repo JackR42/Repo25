@@ -5,6 +5,8 @@ services:
     image: mcr.microsoft.com/devcontainers/base:ubuntu
     volumes:
       - ../..:/workspace:cached
+    env_file:
+      - .env
     command: sleep infinity
     depends_on:
       - sqlserver
