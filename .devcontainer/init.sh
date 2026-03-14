@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ENV_FILE="${SCRIPT_DIR}/.env"
 INIT_SQL_FILE="${SCRIPT_DIR}/init.sql"
-SQL_HOST="sqlserver"
+SQL_HOST="SQL1"
 SQL_USER="sa"
 DB_NAME="POC25"
 

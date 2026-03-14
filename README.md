@@ -22,7 +22,7 @@ This repository includes a dev container that runs **SQL Server 2025 Enterprise 
 2. Open the repository in VS Code and click **Reopen in Container** when prompted (or run **Dev Containers: Reopen in Container** from the Command Palette).
 
 3. SQL Server 2025 will start automatically. Connect to it using the **SQL Server** VS Code extension (`ms-mssql.mssql`) with:
-   - **Server:** `sqlserver`
+   - **Server:** `SQL1`
    - **Authentication:** SQL Login
    - **Username:** `sa`
    - **Password:** *(the value from your `.env` file)*
@@ -31,4 +31,4 @@ This repository includes a dev container that runs **SQL Server 2025 Enterprise 
 
 Each time the dev container starts, it runs `.devcontainer/init.sh`, which executes `.devcontainer/init.sql` to drop and recreate the `POC25` database. This guarantees a clean `POC25` database on every restart.
 
-> **Note:** Port `1433` is forwarded to your local machine so you can also connect with any SQL client (e.g. Azure Data Studio, SSMS) at `localhost,1433`.
+> **Note:** SQL Server is exposed to your machine using `SQL_HOST_PORT` from `.devcontainer/.env` (default: `14330`). This avoids common conflicts on `1433`. Connect external SQL clients at `localhost,<SQL_HOST_PORT>` (for example `localhost,14330`).
