@@ -27,4 +27,8 @@ This repository includes a dev container that runs **SQL Server 2025 Enterprise 
    - **Username:** `sa`
    - **Password:** *(the value from your `.env` file)*
 
+### Automatic database reset on restart
+
+Each time the dev container starts, it runs `.devcontainer/init.sh`, which executes `.devcontainer/init.sql` to drop and recreate the `POC25` database. This guarantees a clean `POC25` database on every restart.
+
 > **Note:** Port `1433` is forwarded to your local machine so you can also connect with any SQL client (e.g. Azure Data Studio, SSMS) at `localhost,1433`.
